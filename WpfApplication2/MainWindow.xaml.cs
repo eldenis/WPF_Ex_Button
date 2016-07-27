@@ -24,5 +24,11 @@ namespace WpfApplication2
         {
             InitializeComponent();
         }
+
+        private void ExButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            //Just to test that the button reacts to the State Change. This change would probably come from the VM
+            ExButton.State = !ExButton.State;
+        }
     }
 }

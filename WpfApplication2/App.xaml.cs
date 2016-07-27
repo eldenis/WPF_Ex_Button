@@ -13,5 +13,12 @@ namespace WpfApplication2
     /// </summary>
     public partial class App : Application
     {
+        protected override void OnStartup(StartupEventArgs e)
+        {
+            base.OnStartup(e);
+            
+            //This value can be different in different projects.
+            ExtendedButton.DefaultText = ConfigurationManager.AppSettings["ButtonText"];
+        }
     }
 }
